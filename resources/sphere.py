@@ -1,15 +1,16 @@
 from resources.renderable import Renderable
 from resources.vec3 import vec3
+from resources.material import Material
 import numpy as np
 
 class Sphere(Renderable):
     c: vec3
     r: float
-
-    def __init__(self, center: vec3, radius: float):
+    mat: Material
+    def __init__(self, center: vec3, radius: float, mat: Material):
         self.c = center
         self.r = radius
-
+        self.mat = mat
     def intersect(self, O, D):
         b = 2 * D.dot(O - self.c)
         c = self.c.dot(self.c) + O.dot(O) - 2 * self.c.dot(O) - (self.r * self.r)
