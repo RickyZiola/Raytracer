@@ -3,7 +3,7 @@ from resources.renderable import Renderable
 import numpy as np
 
 def trace(O, D, scene: list[Renderable], num_bounce = 3):
-    c = vec3(np.ones_like(D.x))
+    c = vec3(np.ones_like(D.x, dtype=np.float32))
     while num_bounce != 0:
         min_dist = np.full_like(D.x, np.inf)
         closest = np.empty_like(D.x, dtype=Renderable)
