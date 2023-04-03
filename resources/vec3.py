@@ -37,7 +37,7 @@ class vec3:
     def __setitem__(self, idx, item):
         self.x[idx] = item.x
         self.y[idx] = item.y
-        self.x[idx] = item.z
+        self.z[idx] = item.z
     def __str__(self):
         return f'vec3({self.x}, {self.y}, {self.z})'
     
