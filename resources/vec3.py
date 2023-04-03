@@ -67,6 +67,8 @@ class vec3:
         if isinstance(other, vec3):
             return vec3(self.x * other.x, self.y * other.y, self.z * other.z)
         return vec3(self.x * other, self.y * other, self.z * other)
+    def __rmul__ (self, other):
+        return self * other
     def __truediv__ (self, other):
         if isinstance(other, vec3):
             return vec3(self.x / other.x, self.y / other.y, self.z / other.z)

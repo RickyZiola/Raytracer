@@ -4,9 +4,11 @@ import numpy as np
 class SubMaterial:
     color: vec3
     emission: vec3
-    def __init__(self, color: vec3, emission: vec3):
+    diffuse: float
+    def __init__(self, color: vec3, emission: vec3, diffuse: float = 1.):
         self.color = color
         self.emission = emission
+        self.diffuse = diffuse
 class Material:
     diffuse: SubMaterial
     specular: SubMaterial
