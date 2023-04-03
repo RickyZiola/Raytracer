@@ -35,9 +35,11 @@ class vec3:
     def __getitem__(self,idx):
         return vec3(self.x[idx], self.y[idx], self.z[idx])
     def __setitem__(self, idx, item):
+        print(self[idx])
         self.x[idx] = item.x
         self.y[idx] = item.y
         self.z[idx] = item.z
+        print(self[idx], end="\n\n")
     def __str__(self):
         return f'vec3({self.x}, {self.y}, {self.z})'
     
